@@ -1,4 +1,4 @@
-Este es mi proyeto del curso.
+Este es mi proyecto del curso.
 
 *leer un archivo
 *Imprimir el contenido
