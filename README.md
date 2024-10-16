@@ -44,7 +44,8 @@ def leer_datos_archivo(archivo_csv):
     print(45 * chr(0x2015))
 
 def buscar_pacientes(pacientes, ids_buscados):
-    # Busca pacientes por sus IDs y muestra la información
+# Busca pacientes por sus IDs y muestra la información
+    
     for id_buscado in ids_buscados:
         encontrado = False
         for paciente in pacientes:
@@ -57,7 +58,7 @@ def buscar_pacientes(pacientes, ids_buscados):
             print(45 * chr(0x2015))
 
 def obtener_datos_entrada():
-    # Solicita los IDs de los pacientes y los convierte a enteros
+# Solicita los IDs de los pacientes y los convierte a enteros
     ids_input = input("ID. pacientes (separados por coma): ").split(',')
     # Convertir a enteros, manejando posibles errores de entrada
     IDs = []
