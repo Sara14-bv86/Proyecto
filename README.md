@@ -82,7 +82,9 @@ pacientes = leer_datos_archivo(archivo_csv)
 
 # Mostrar encabezado del sistema
 print(45 * chr(0x2015))
+
 print("                   Sistema XYZ                    ")
+
 print(45 * chr(0x2015))
 
 # Obtener los IDs de los pacientes
