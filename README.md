@@ -21,7 +21,7 @@ def leer_datos_archivo(archivo_csv):
     else:
         imc_str = f"{paciente['IMC']:.2f}"
     
-   # Verificar otras condiciones de salud
+   # Verificar si existe alguna otra alerta de salud
     
     diabetes_str = Fore.RED + Style.BRIGHT+ paciente['Diabetes'] + Style.RESET_ALL if paciente['Diabetes'] == 'Si' else paciente['Diabetes']
     hipertension_str = Fore.RED + Style.BRIGHT+ paciente['Hipertensión'] + Style.RESET_ALL if paciente['Hipertensión'] == 'Si' else paciente['Hipertensión']
@@ -42,9 +42,11 @@ def leer_datos_archivo(archivo_csv):
     print(f"{'Trastorno del sueño':>24} :  {trastorno_sueno_str}")
     print(f"{'Trastorno de la alimentación':>24} :  {trastorno_alimentacion_str}")
     print(45 * chr(0x2015))
-
-def buscar_pacientes(pacientes, ids_buscados):
+    
 # Busca pacientes por sus IDs y muestra la información
+def buscar_pacientes(pacientes, ids_buscados):
+
+ # Checamos si el id está en la lista de los solicitados
     
     for id_buscado in ids_buscados:
         encontrado = False
@@ -57,7 +59,9 @@ def buscar_pacientes(pacientes, ids_buscados):
             print(Fore.RED+ Style.BRIGHT + f"No se encontró ningún paciente con ID: {id_buscado}")
             print(45 * chr(0x2015))
 
+# Solicita los IDs de los pacientes 
 def obtener_datos_entrada():
+
 # Solicita los IDs de los pacientes y los convierte a enteros
     ids_input = input("ID. pacientes (separados por coma): ").split(',')
     # Convertir a enteros, manejando posibles errores de entrada
